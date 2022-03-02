@@ -8,9 +8,9 @@ ECHO ^| ^|/ ^|/ / _ `(_-^</ _ \  _/ // _ \/ _ \  / (_ / _ `/ __/ _ `/ _ `/ -_)
 ECHO ^|__/^|__/\_,_/___/_//_/ /___/_//_/_//_/  \___/\_,_/_/  \_,_/\_, /\__/ 
 ECHO                                                           /___/   
 
-CD ../
-git clone https://github.com/vkr16/WashInnGarageUpdater.git
-CD WashInnGarageUpdater
+git init
+git remote add origin https://github.com/vkr16/WashInnGarageUpdater
 PAUSE
 DEL setup.bat
+CLS
 CALL updater.bat
