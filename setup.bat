@@ -8,7 +8,7 @@ ECHO ^| ^|/ ^|/ / _ `(_-^</ _ \  _/ // _ \/ _ \  / (_ / _ `/ __/ _ `/ _ `/ -_)
 ECHO ^|__/^|__/\_,_/___/_//_/ /___/_//_/_//_/  \___/\_,_/_/  \_,_/\_, /\__/ 
 ECHO                                                           /___/   
 
-git init
+git init -b main
 git remote add origin https://github.com/vkr16/WashInnGarageUpdater
 PAUSE
 DEL setup.bat

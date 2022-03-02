@@ -39,6 +39,7 @@ IF %action%==1 (
     ECHO Checking -^> https://github.com/vkr16/WashInnGarageUpdater
     git reset --hard
     git pull origin main
+    DEL setup.bat
     
     ECHO "  _    _           _       _           _  "
     ECHO " | |  | |         | |     | |         | | "
