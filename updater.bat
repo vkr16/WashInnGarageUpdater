@@ -53,6 +53,7 @@ IF %action%==1 (
     ECHO.
     ECHO Latest version installed.
     PAUSE
+    CLS
     CALL updater.bat
     GOTO END
 )
