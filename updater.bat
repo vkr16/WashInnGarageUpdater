@@ -89,6 +89,7 @@ IF %action%==3 (
     ECHO Updating....
     ECHO.
     git checkout %latestversion%
+    git reset --hard
     git pull origin %latestversion%
     cd ../WashInnGarageUpdater
     
