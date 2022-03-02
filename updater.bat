@@ -1,6 +1,8 @@
 @ECHO OFF
 :TOP
 TITLE Wash Inn Garage Code Version Updater v1.0.0-alpha.1
+SET latestbranch=v1-rc.2
+SET latestversion=v1.1.1-rc.2
 
 ECHO  _      __         __     ____            _____                      
 ECHO ^| ^| /^| / /__ ____ / /    /  _/__  ___    / ___/__ ________ ____ ____ 
@@ -13,15 +15,13 @@ ECHO ^|~ Updater Version : v1.0.0-alpha.1 ~^|
 ECHO --------------------------------------
 ECHO.    
 
-SET latestversion=v1-rc.2
-ECHO %latestversion%
 
 ECHO +--------------------------------------------------+
 ECHO ^|~ Action Menu :                                  ~^|
 ECHO ^|--------------------------------------------------^|
 ECHO ^|~ 1. Check and install latest updater version    ~^|
 ECHO ^|~ 2. Download from github                        ~^|
-ECHO ^|~ 3. Install latest version (v1.1.1-rc.2)        ~^|
+ECHO ^|~ 3. Install latest version (%latestversion%)    ~^|
 ECHO ^|~ 4. Install previous version (unavailable)      ~^|
 ECHO ^|~ 5. Quit                                        ~^|
 ECHO +--------------------------------------------------+
@@ -67,7 +67,7 @@ IF %action%==2 (
     ECHO.
     cd WashInnGarage
     ECHO Checkouting version....
-    git checkout %latestversion%
+    git checkout %latestbranch%
     cd ../WashInnGarageUpdater
         
     ECHO "  _____                      _                 _          _  "
@@ -88,9 +88,9 @@ IF %action%==3 (
     cd ../WashInnGarage
     ECHO Updating....
     ECHO.
-    git checkout %latestversion%
+    git checkout %latestbranch%
     git reset --hard
-    git pull origin %latestversion%
+    git pull origin %latestbranch%
     cd ../WashInnGarageUpdater
     
     ECHO "  _    _           _       _           _  "
@@ -105,6 +105,10 @@ IF %action%==3 (
     PAUSE
     CLS
     GOTO TOP
+)
+
+IF %action%==5 (
+    EXIT /B
 )
 
 PAUSE
