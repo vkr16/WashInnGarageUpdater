@@ -38,6 +38,7 @@ IF %action%==1 (
     CLS
     ECHO Checking -^> https://github.com/vkr16/WashInnGarageUpdater
     git reset --hard
+    git clean -f
     git pull origin main
     DEL setup.bat
     
