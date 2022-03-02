@@ -1,6 +1,6 @@
 @ECHO OFF
 :TOP
-TITLE Wash Inn Garage Code Version Updater v1.0.0-alpha.1
+TITLE Wash Inn Garage Code Version Updater
 SET latestbranch=v1-rc.2
 SET latestversion=v1.1.1-rc.2
 
@@ -11,7 +11,7 @@ ECHO ^|__/^|__/\_,_/___/_//_/ /___/_//_/_//_/  \___/\_,_/_/  \_,_/\_, /\__/
 ECHO                                                           /___/      
 
 ECHO --------------------------------------
-ECHO ^|~ Updater Version : v1.0.0-alpha.1 ~^|
+ECHO ^|~ Updater Version : v1.0.0-stable ~^|
 ECHO --------------------------------------
 ECHO.    
 
