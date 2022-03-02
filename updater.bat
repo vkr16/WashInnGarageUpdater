@@ -3,6 +3,7 @@
 TITLE Wash Inn Garage Code Version Updater
 SET latestbranch=v1-rc.2
 SET latestversion=v1.1.1-rc.2
+SET updaterversion=1.0.0-stable
 
 ECHO  _      __         __     ____            _____                      
 ECHO ^| ^| /^| / /__ ____ / /    /  _/__  ___    / ___/__ ________ ____ ____ 
@@ -69,7 +70,7 @@ IF %action%==2 (
     cd WashInnGarage
     ECHO Checkouting version....
     git checkout %latestbranch%
-    cd ../WashInnGarageUpdater
+    cd ../WashInnGarageUpdater-%updaterversion%
         
     ECHO "  _____                      _                 _          _  "
     ECHO " |  __ \                    | |               | |        | | "
@@ -92,7 +93,7 @@ IF %action%==3 (
     git checkout %latestbranch%
     git reset --hard
     git pull origin %latestbranch%
-    cd ../WashInnGarageUpdater
+    cd ../WashInnGarageUpdater-%updaterversion%
     
     ECHO "  _    _           _       _           _  "
     ECHO " | |  | |         | |     | |         | | "
