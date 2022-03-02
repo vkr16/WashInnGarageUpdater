@@ -80,7 +80,30 @@ IF %action%==2 (
     PAUSE   
     CLS
     GOTO TOP                                                     
+)
 
+IF %action%==3 (
+    CLS
+    ECHO Checking -^> https://github.com/vkr16/WashInnGarage
+    cd ../WashInnGarage
+    ECHO Updating....
+    ECHO.
+    git checkout %latestversion%
+    git pull origin %latestversion%
+    cd ../WashInnGarageUpdater
+    
+    ECHO "  _    _           _       _           _  "
+    ECHO " | |  | |         | |     | |         | | "
+    ECHO " | |  | |_ __   __| | __ _| |_ ___  __| | "
+    ECHO " | |  | | '_ \ / _` |/ _` | __/ _ \/ _` | "
+    ECHO " | |__| | |_) | (_| | (_| | ||  __/ (_| | "
+    ECHO "  \____/| .__/ \__,_|\__,_|\__\___|\__,_| "
+    ECHO "        | |                               "
+    ECHO "        |_|                               "
+
+    PAUSE
+    CLS
+    GOTO TOP
 )
 
 PAUSE
