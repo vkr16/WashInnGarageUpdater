@@ -8,7 +8,7 @@ ECHO ^|__/^|__/\_,_/___/_//_/ /___/_//_/_//_/  \___/\_,_/_/  \_,_/\_, /\__/
 ECHO                                                           /___/      
 
 ECHO --------------------------------------
-ECHO ^|~ Updater Version : v0.0.1-alpha.1 ~^|
+ECHO ^|~ Updater Version : v1.0.0-alpha.1 ~^|
 ECHO --------------------------------------
 ECHO.                                    
 
@@ -33,6 +33,7 @@ ECHO.
 IF %action%==1 (
     SET action=0
     ECHO Checking -^> https://github.com/vkr16/WashInnGarageUpdater
+    git pull origin main
     CLS
     
     ECHO "  _    _           _       _           _  "
