@@ -65,10 +65,10 @@ IF %action%==2 (
     ECHO Cloning repository to 'WashInnGarage'
     git clone https://github.com/vkr16/WashInnGarage.git
     ECHO.
+    cd WashInnGarage
     ECHO Checkouting version....
     git checkout %latestversion%
-
-    
+        
     ECHO "  _____                      _                 _          _  "
     ECHO " |  __ \                    | |               | |        | | "
     ECHO " | |  | | _____      ___ __ | | ___   __ _  __| | ___  __| | "
@@ -77,6 +77,7 @@ IF %action%==2 (
     ECHO " |_____/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|\__,_| "
                                                             
     PAUSE   
+    CLS
     GOTO TOP                                                     
 
 )
