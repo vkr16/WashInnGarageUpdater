@@ -33,7 +33,7 @@ ECHO.
 IF %action%==1 (
     SET action=0
     ECHO Checking -^> https://github.com/vkr16/WashInnGarageUpdater
-    git reset --hard origin main
+    git reset --hard
     git pull origin main
     CLS
     
