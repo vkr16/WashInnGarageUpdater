@@ -1,4 +1,4 @@
-@ECHO OFF
+@ECHO ON
 :TOP
 TITLE Updater Setup
 
@@ -9,7 +9,8 @@ ECHO ^|__/^|__/\_,_/___/_//_/ /___/_//_/_//_/  \___/\_,_/_/  \_,_/\_, /\__/
 ECHO                                                           /___/   
 
 CD ../
-git clone https://github.com/WashInnGarageUpdater.git
+git clone https://github.com/vkr16/WashInnGarageUpdater.git
 CD WashInnGarageUpdater
+PAUSE
 DEL setup.bat
 CALL updater.bat
