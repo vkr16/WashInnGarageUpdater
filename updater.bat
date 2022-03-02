@@ -68,6 +68,7 @@ IF %action%==2 (
     cd WashInnGarage
     ECHO Checkouting version....
     git checkout %latestversion%
+    cd ../WashInnGarageUpdater
         
     ECHO "  _____                      _                 _          _  "
     ECHO " |  __ \                    | |               | |        | | "
