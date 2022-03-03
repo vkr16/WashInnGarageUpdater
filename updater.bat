@@ -12,7 +12,7 @@ ECHO ^|__/^|__/\_,_/___/_//_/ /___/_//_/_//_/  \___/\_,_/_/  \_,_/\_, /\__/
 ECHO                                                           /___/      
 
 ECHO --------------------------------------
-ECHO ^|~ Updater Version : v1.0.0-stable ~^|
+ECHO ^|~ Updater Version : v1.0.2-stable ~^|
 ECHO --------------------------------------
 ECHO.    
 
@@ -38,6 +38,10 @@ ECHO.
 
 IF %action%==1 (
     CLS
+    CD ../
+    REN WashInnGarageUpdater-%updaterversion% WashInnGarageUpdater
+    CD WashInnGarageUpdater
+
     ECHO Checking -^> https://github.com/vkr16/WashInnGarageUpdater
     git reset --hard
     git clean -f
@@ -71,7 +75,7 @@ IF %action%==2 (
     cd WashInnGarage
     ECHO Checkouting version....
     git checkout %latestbranch%
-    cd ../WashInnGarageUpdater-%updaterversion%
+    cd ../WashInnGarageUpdater
         
     ECHO "  _____                      _                 _          _  "
     ECHO " |  __ \                    | |               | |        | | "
@@ -94,7 +98,7 @@ IF %action%==3 (
     git checkout %latestbranch%
     git reset --hard
     git pull origin %latestbranch%
-    cd ../WashInnGarageUpdater-%updaterversion%
+    cd ../WashInnGarageUpdater
     
     ECHO "  _    _           _       _           _  "
     ECHO " | |  | |         | |     | |         | | "
@@ -119,7 +123,7 @@ IF %action%==4 (
     git checkout main
     git reset --hard
     git pull origin main
-    cd ../WashInnGarageUpdater-%updaterversion%
+    cd ../WashInnGarageUpdater
     
     ECHO "  _    _           _       _           _  "
     ECHO " | |  | |         | |     | |         | | "
