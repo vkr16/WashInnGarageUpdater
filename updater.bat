@@ -22,7 +22,7 @@ ECHO ^|~ Action Menu :                                  ~^|
 ECHO ^|--------------------------------------------------^|
 ECHO ^|~ 1. Check and install latest updater version    ~^|
 ECHO ^|~ 2. Download from github                        ~^|
-ECHO ^|~ 3. Install latest version (%latestversion%)        ~^|
+ECHO ^|~ 3. Install latest version (%latestversion%)      ~^|
 ECHO ^|~ 4. Install latest development version          ~^|
 ECHO ^|~ 5. Quit                                        ~^|
 ECHO +--------------------------------------------------+
