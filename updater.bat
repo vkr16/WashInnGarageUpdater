@@ -98,8 +98,7 @@ IF %action%==3 (
     cd ../WashInnGarage
     ECHO Updating....
     ECHO.
-    git branch $latestbranch%
-    git checkout %latestbranch%
+    git checkout %latestbranch% || git checkout -b %latestbranch%
     git reset --hard
     git pull origin %latestbranch%
     cd ../WashInnGarageUpdater
@@ -124,8 +123,7 @@ IF %action%==4 (
     cd ../WashInnGarage
     ECHO Updating....
     ECHO.
-    git branch %previousbranch%
-    git checkout %previousbranch%
+    git checkout %previousbranch% || git checkout -b %previousbranch%
     git reset --hard
     git pull origin %previousbranch%
     cd ../WashInnGarageUpdater
