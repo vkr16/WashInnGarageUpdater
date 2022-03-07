@@ -1,10 +1,10 @@
 @ECHO OFF
 :TOP
 TITLE Wash Inn Garage Code Version Updater
-SET latestbranch=v1.1.2-stable
-SET latestversion=v1.1.2-stable
-SET previousbranch=v1.1.1-stable
-SET previousversion=v1.1.1-stable
+SET latestbranch=1.1.2-stable
+SET latestversion=1.1.2-stable
+SET previousbranch=1.1.1-stable
+SET previousversion=1.1.1-stable
 SET updaterversion=1.0.0-stable
 
 ECHO  _      __         __     ____            _____                      
@@ -24,8 +24,8 @@ ECHO ^|~ Action Menu :                                  ~^|
 ECHO ^|--------------------------------------------------^|
 ECHO ^|~ 1. Check and install latest updater version    ~^|
 ECHO ^|~ 2. Download from github                        ~^|
-ECHO ^|~ 3. Install latest version (%latestversion%)      ~^|
-ECHO ^|~ 4. Install previous version (%previousversion%)    ~^|
+ECHO ^|~ 3. Install latest version (v%latestversion%)      ~^|
+ECHO ^|~ 4. Install previous version (v%previousversion%)    ~^|
 ECHO ^|~ 5. Install latest development version          ~^|
 ECHO ^|~ 6. Quit                                        ~^|
 ECHO +--------------------------------------------------+
