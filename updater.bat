@@ -1,8 +1,10 @@
 @ECHO OFF
 :TOP
 TITLE Wash Inn Garage Code Version Updater
-SET latestbranch=v1-stable
-SET latestversion=v1.1.1-stable
+SET latestbranch=v1.1.2-stable
+SET latestversion=v1.1.2-stable
+SET previousbranch=v1.1.1-stable
+SET previousversion=v1.1.1-stable
 SET updaterversion=1.0.0-stable
 
 ECHO  _      __         __     ____            _____                      
@@ -12,7 +14,7 @@ ECHO ^|__/^|__/\_,_/___/_//_/ /___/_//_/_//_/  \___/\_,_/_/  \_,_/\_, /\__/
 ECHO                                                           /___/      
 
 ECHO --------------------------------------
-ECHO ^|~ Updater Version : v1.0.3-stable  ~^|
+ECHO ^|~ Updater Version : v1.0.4-stable  ~^|
 ECHO --------------------------------------
 ECHO.    
 
@@ -23,8 +25,9 @@ ECHO ^|--------------------------------------------------^|
 ECHO ^|~ 1. Check and install latest updater version    ~^|
 ECHO ^|~ 2. Download from github                        ~^|
 ECHO ^|~ 3. Install latest version (%latestversion%)      ~^|
-ECHO ^|~ 4. Install latest development version          ~^|
-ECHO ^|~ 5. Quit                                        ~^|
+ECHO ^|~ 4. Install previous version (%previousversion%)    ~^|
+ECHO ^|~ 5. Install latest development version          ~^|
+ECHO ^|~ 6. Quit                                        ~^|
 ECHO +--------------------------------------------------+
 
 ECHO.
@@ -120,6 +123,31 @@ IF %action%==4 (
     cd ../WashInnGarage
     ECHO Updating....
     ECHO.
+    git checkout %previousbranch%
+    git reset --hard
+    git pull origin %previousbranch%
+    cd ../WashInnGarageUpdater
+    
+    ECHO "  _    _           _       _           _  "
+    ECHO " | |  | |         | |     | |         | | "
+    ECHO " | |  | |_ __   __| | __ _| |_ ___  __| | "
+    ECHO " | |  | | '_ \ / _` |/ _` | __/ _ \/ _` | "
+    ECHO " | |__| | |_) | (_| | (_| | ||  __/ (_| | "
+    ECHO "  \____/| .__/ \__,_|\__,_|\__\___|\__,_| "
+    ECHO "        | |                               "
+    ECHO "        |_|                               "
+
+    PAUSE
+    CLS
+    GOTO TOP
+)
+
+IF %action%==5 (
+    CLS
+    ECHO Checking -^> https://github.com/vkr16/WashInnGarage
+    cd ../WashInnGarage
+    ECHO Updating....
+    ECHO.
     git checkout main
     git reset --hard
     git pull origin main
@@ -139,7 +167,7 @@ IF %action%==4 (
     GOTO TOP
 )
 
-IF %action%==5 (
+IF %action%==6 (
     EXIT /B
 )
 
